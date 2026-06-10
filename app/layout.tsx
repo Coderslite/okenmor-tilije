@@ -15,15 +15,64 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Okenmor Tilije Foundation - Empowering Communities & Education",
-  description: "Official website of the Okenmor Tilije Foundation. Dedicated to supporting youth, students, and community development across Delta State, Nigeria through scholarships, skills acquisition, and basic infrastructure.",
-  keywords: ["Okenmor Tilije Foundation", "Fidelis Okenmor Tilije", "Delta State Scholarship", "Ukwuani LGA", "Anioma Scholarships", "Community Development Delta State"],
+  metadataBase: new URL("https://okenmortilije.org"),
+
+  // ── Core SEO ──────────────────────────────────────────────────────────────
+  title: {
+    default: "Okenmor Tilije Foundation — Empowering Communities & Education",
+    template: "%s | Okenmor Tilije Foundation",
+  },
+  description:
+    "The Okenmor Tilije Foundation supports youth, students, and community development across Delta State, Nigeria through tertiary scholarships, skills acquisition, and basic infrastructure projects.",
+  keywords: [
+    "Okenmor Tilije Foundation",
+    "Fidelis Okenmor Tilije",
+    "Delta State Scholarship",
+    "Ukwuani LGA",
+    "Anioma Scholarships",
+    "Community Development Delta State",
+    "Youth Empowerment Nigeria",
+    "Foundation Scholarship Nigeria",
+    "Ndokwa",
+  ],
+  authors: [{ name: "Okenmor Tilije Foundation" }],
+  creator: "Okenmor Tilije Foundation",
+  publisher: "Okenmor Tilije Foundation",
+
+  // ── Robots ────────────────────────────────────────────────────────────────
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+
+  // ── Open Graph ────────────────────────────────────────────────────────────
   openGraph: {
-    title: "Okenmor Tilije Foundation - Empowering Communities",
-    description: "Dedicated to supporting youth, students, and community development across Delta State, Nigeria through scholarships, skills acquisition, and basic infrastructure.",
     type: "website",
     locale: "en_NG",
-  }
+    url: "https://okenmortilije.org",
+    siteName: "Okenmor Tilije Foundation",
+    title: "Okenmor Tilije Foundation — Empowering Communities & Education",
+    description:
+      "Supporting youth, students, and community development across Delta State, Nigeria through scholarships, skills acquisition, and infrastructure.",
+  },
+
+  // ── Twitter / X Card ──────────────────────────────────────────────────────
+  twitter: {
+    card: "summary_large_image",
+    title: "Okenmor Tilije Foundation — Empowering Communities & Education",
+    description:
+      "Supporting youth, students, and community development across Delta State, Nigeria.",
+  },
+
+  // ── App-level ─────────────────────────────────────────────────────────────
+  category: "nonprofit",
 };
 
 export default function RootLayout({
