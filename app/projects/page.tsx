@@ -13,7 +13,7 @@ const projects = [
     date: "May 2026",
     status: "Completed",
     impact: "1,500+ Beneficiaries",
-    image: "/img3.jpg"
+    image: "/projects/road_construction.jpg"
   },
   {
     title: "Obiaruku Annual Free Medical Mission",
@@ -22,7 +22,7 @@ const projects = [
     date: "April 2026",
     status: "Completed",
     impact: "850 Patients Treated",
-    image: "/img1.jpg"
+    image: "/projects/road_construction2.jpg"
   },
   {
     title: "Anioma Schools Book and Desk Support Scheme",
@@ -31,7 +31,7 @@ const projects = [
     date: "January 2026",
     status: "Completed",
     impact: "12 Primary Schools Supported",
-    image: "/img2.jpg"
+    image: "/projects/scholarship.jpg"
   },
   {
     title: "Obiaruku Vocational Training Center Support",

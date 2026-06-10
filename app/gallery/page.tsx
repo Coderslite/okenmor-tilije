@@ -58,66 +58,68 @@ export default function Gallery() {
   const [selectedPhoto, setSelectedPhoto] = useState<number | null>(null);
 
   return (
-    <div className="flex flex-col w-full animate-fade-in">
-      {/* 1. Header Banner */}
-      <section className="bg-slate-950 text-white py-16 md:py-24 px-4 sm:px-6 lg:px-8 border-b border-slate-900 relative">
-        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#e11d48_1px,transparent_1px)] [background-size:24px_24px]"></div>
-        <div className="max-w-4xl mx-auto text-center relative z-10">
-          <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xxs font-bold bg-primary/15 text-primary border border-primary/20 mb-4 uppercase tracking-widest">
-            Media Library
-          </span>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-black mb-4 tracking-tight leading-tight">
-            Event <span className="gradient-text">Photo Gallery</span>
-          </h1>
-          <p className="text-sm sm:text-base md:text-lg text-slate-400 max-w-xl mx-auto leading-relaxed font-semibold">
-            Visual highlights of our charitable events, project openings, and outreach schedules across Delta State.
-          </p>
-        </div>
-      </section>
+    <>
+      <div className="flex flex-col w-full animate-fade-in">
+        {/* 1. Header Banner */}
+        <section className="bg-slate-950 text-white py-16 md:py-24 px-4 sm:px-6 lg:px-8 border-b border-slate-900 relative">
+          <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#e11d48_1px,transparent_1px)] [background-size:24px_24px]"></div>
+          <div className="max-w-4xl mx-auto text-center relative z-10">
+            <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xxs font-bold bg-primary/15 text-primary border border-primary/20 mb-4 uppercase tracking-widest">
+              Media Library
+            </span>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-black mb-4 tracking-tight leading-tight">
+              Event <span className="gradient-text">Photo Gallery</span>
+            </h1>
+            <p className="text-sm sm:text-base md:text-lg text-slate-400 max-w-xl mx-auto leading-relaxed font-semibold">
+              Visual highlights of our charitable events, project openings, and outreach schedules across Delta State.
+            </p>
+          </div>
+        </section>
 
-      {/* 2. Gallery Masonry Grid */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto w-full">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {galleryEvents.map((event, idx) => (
-            <div
-              key={idx}
-              onClick={() => setSelectedPhoto(idx)}
-              className="group cursor-pointer bg-white dark:bg-slate-900 border border-border rounded-3xl overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between"
-            >
-              {/* Media Thumbnail Container */}
-              <div className="relative aspect-[4/3] bg-slate-100 dark:bg-slate-950 overflow-hidden border-b border-border">
-                <Image
-                  src={event.image}
-                  alt={event.title}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="absolute top-4 left-4 z-10">
-                  <span className={`px-3 py-1 border rounded-lg text-[10px] font-extrabold uppercase tracking-widest ${event.badgeColor}`}>
-                    {event.category}
-                  </span>
+        {/* 2. Gallery Masonry Grid */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto w-full">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {galleryEvents.map((event, idx) => (
+              <div
+                key={idx}
+                onClick={() => setSelectedPhoto(idx)}
+                className="group cursor-pointer bg-white dark:bg-slate-900 border border-border rounded-3xl overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between"
+              >
+                {/* Media Thumbnail Container */}
+                <div className="relative aspect-[4/3] bg-slate-100 dark:bg-slate-950 overflow-hidden border-b border-border">
+                  <Image
+                    src={event.image}
+                    alt={event.title}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute top-4 left-4 z-10">
+                    <span className={`px-3 py-1 border rounded-lg text-[10px] font-extrabold uppercase tracking-widest ${event.badgeColor}`}>
+                      {event.category}
+                    </span>
+                  </div>
+                  {/* Hover overlay detail indicator */}
+                  <div className="absolute inset-0 bg-secondary/85 backdrop-blur-xxs flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
+                    <span className="text-white text-xs font-extrabold uppercase tracking-widest bg-primary px-4 py-2 rounded-full shadow-lg">
+                      Expand Details
+                    </span>
+                  </div>
                 </div>
-                {/* Hover overlay detail indicator */}
-                <div className="absolute inset-0 bg-secondary/85 backdrop-blur-xxs flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
-                  <span className="text-white text-xs font-extrabold uppercase tracking-widest bg-primary px-4 py-2 rounded-full shadow-lg">
-                    Expand Details
-                  </span>
+
+                {/* Text Meta info */}
+                <div className="p-6">
+                  <h3 className="font-extrabold text-base text-secondary dark:text-white mb-2 leading-tight group-hover:text-primary transition-colors line-clamp-1">
+                    {event.title}
+                  </h3>
+                  <p className="text-slate-500 dark:text-slate-400 text-xs sm:text-sm leading-relaxed font-semibold line-clamp-2">
+                    {event.description}
+                  </p>
                 </div>
               </div>
-
-              {/* Text Meta info */}
-              <div className="p-6">
-                <h3 className="font-extrabold text-base text-secondary dark:text-white mb-2 leading-tight group-hover:text-primary transition-colors line-clamp-1">
-                  {event.title}
-                </h3>
-                <p className="text-slate-500 dark:text-slate-400 text-xs sm:text-sm leading-relaxed font-semibold line-clamp-2">
-                  {event.description}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
+            ))}
+          </div>
+        </section>
+      </div>
 
       {/* 3. Lightbox Detail Dialog Overlay */}
       {selectedPhoto !== null && (
@@ -213,6 +215,6 @@ export default function Gallery() {
           </button>
         </div>
       )}
-    </div>
+    </>
   );
 }
