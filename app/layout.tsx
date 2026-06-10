@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://okenmortilije.org"),
+  metadataBase: new URL("https://okenmor-tilije.vercel.app"),
 
   // ── Core SEO ──────────────────────────────────────────────────────────────
   title: {
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_NG",
-    url: "https://okenmortilije.org",
+    url: "https://okenmor-tilije.vercel.app",
     siteName: "Okenmor Tilije Foundation",
     title: "Okenmor Tilije Foundation — Empowering Communities & Education",
     description:
