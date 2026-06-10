@@ -165,7 +165,7 @@ export default function Home() {
                   className="object-cover animate-fade-in"
                   priority={index === 0}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-900/  to-slate-900/30"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-900/50 to-slate-900/20"></div>
               </div>
             );
           })}
