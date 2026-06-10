@@ -77,7 +77,7 @@ export default function Contact() {
         <div className="lg:col-span-5 flex flex-col gap-8">
           <div className="flex flex-col gap-2">
             <span className="text-primary font-bold text-xs uppercase tracking-widest">Contact Info</span>
-            <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-secondary dark:text-white">
+            <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-secondary">
               Office Locations
             </h2>
             <div className="w-12 h-1 bg-primary rounded-full mt-1"></div>
@@ -85,15 +85,15 @@ export default function Contact() {
 
           <div className="space-y-6">
             <div className="flex items-start gap-4">
-              <div className="p-3 bg-secondary/10 text-secondary dark:text-primary-dark rounded-xl shrink-0">
+              <div className="p-3 bg-secondary/10 text-secondary rounded-xl shrink-0">
                 <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
               </div>
               <div className="text-sm font-semibold">
-                <h4 className="font-extrabold text-secondary dark:text-white mb-1">Administrative Headquarters</h4>
-                <p className="text-slate-500 dark:text-slate-400 leading-relaxed">
+                <h4 className="font-extrabold text-secondary mb-1">Administrative Headquarters</h4>
+                <p className="text-slate-500 leading-relaxed">
                   Okenmor Mansion Road, Obiaruku, Ukwuani LGA / Asaba Office, Delta State, Nigeria
                 </p>
               </div>
@@ -106,8 +106,8 @@ export default function Contact() {
                 </svg>
               </div>
               <div className="text-sm font-semibold">
-                <h4 className="font-extrabold text-secondary dark:text-white mb-1">Phone Enquiries</h4>
-                <a href="tel:+2348037237799" className="text-slate-500 dark:text-slate-400 hover:text-primary transition-colors block">
+                <h4 className="font-extrabold text-secondary mb-1">Phone Enquiries</h4>
+                <a href="tel:+2348037237799" className="text-slate-500 hover:text-primary transition-colors block">
                   +234 (0) 803 723 7799
                 </a>
               </div>
@@ -120,41 +120,41 @@ export default function Contact() {
                 </svg>
               </div>
               <div className="text-sm font-semibold">
-                <h4 className="font-extrabold text-secondary dark:text-white mb-1">General Inbox</h4>
-                <a href="mailto:info@okenmortilijefoundation.org" className="text-slate-500 dark:text-slate-400 hover:text-primary transition-colors block">
+                <h4 className="font-extrabold text-secondary mb-1">General Inbox</h4>
+                <a href="mailto:info@okenmortilijefoundation.org" className="text-slate-500 hover:text-primary transition-colors block">
                   info@okenmortilijefoundation.org
                 </a>
               </div>
             </div>
 
             <div className="flex items-start gap-4">
-              <div className="p-3 bg-slate-100 dark:bg-slate-800 text-slate-500 rounded-xl shrink-0">
+              <div className="p-3 bg-slate-100 text-slate-500 rounded-xl shrink-0">
                 <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
               <div className="text-sm font-semibold">
-                <h4 className="font-extrabold text-secondary dark:text-white mb-1">Operational Hours</h4>
-                <p className="text-slate-500 dark:text-slate-400">
+                <h4 className="font-extrabold text-secondary mb-1">Operational Hours</h4>
+                <p className="text-slate-500">
                   Monday &ndash; Friday: 8:00 AM &ndash; 5:00 PM
                 </p>
-                <p className="text-slate-400 dark:text-slate-500 text-xxs mt-0.5 font-bold">Closed on Weekends and Public Holidays</p>
+                <p className="text-slate-400 text-xxs mt-0.5 font-bold">Closed on Weekends and Public Holidays</p>
               </div>
             </div>
           </div>
         </div>
 
         {/* Columns: Interactive Form */}
-        <div className="lg:col-span-7 bg-white dark:bg-slate-900 border border-border p-6 md:p-10 rounded-3xl shadow-lg">
+        <div className="lg:col-span-7 bg-white border border-border p-6 md:p-10 rounded-3xl shadow-lg">
           {submitted ? (
             <div className="text-center py-12 animate-fade-in">
-              <div className="w-16 h-16 bg-emerald-100 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-400 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6">
                 <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                 </svg>
               </div>
-              <h3 className="text-2xl font-black text-secondary dark:text-white mb-3">Message Sent Successfully!</h3>
-              <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 leading-relaxed mb-6 font-medium">
+              <h3 className="text-2xl font-black text-secondary mb-3">Message Sent Successfully!</h3>
+              <p className="text-xs sm:text-sm text-slate-500 leading-relaxed mb-6 font-medium">
                 Thank you for reaching out. A representative from the Okenmor Tilije Foundation will review your inquiry and get back to you shortly.
               </p>
               <button
@@ -166,13 +166,13 @@ export default function Contact() {
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-5">
-              <h4 className="font-extrabold text-lg text-secondary dark:text-white border-b border-border pb-2 mb-4">
+              <h4 className="font-extrabold text-lg text-secondary border-b border-border pb-2 mb-4">
                 Send a Direct Message
               </h4>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="flex flex-col gap-1.5">
-                  <label className="text-xs font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400">
+                  <label className="text-xs font-bold uppercase tracking-wider text-slate-600">
                     Your Full Name *
                   </label>
                   <input
@@ -181,7 +181,7 @@ export default function Contact() {
                     value={formData.name}
                     onChange={handleChange}
                     placeholder="Enter your name"
-                    className={`bg-slate-50 dark:bg-slate-950 border rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary ${
+                    className={`bg-slate-50 border rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary ${
                       errors.name ? "border-red-500" : "border-border"
                     }`}
                   />
@@ -189,7 +189,7 @@ export default function Contact() {
                 </div>
 
                 <div className="flex flex-col gap-1.5">
-                  <label className="text-xs font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400">
+                  <label className="text-xs font-bold uppercase tracking-wider text-slate-600">
                     Email Address *
                   </label>
                   <input
@@ -198,7 +198,7 @@ export default function Contact() {
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="name@example.com"
-                    className={`bg-slate-50 dark:bg-slate-950 border rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary ${
+                    className={`bg-slate-50 border rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary ${
                       errors.email ? "border-red-500" : "border-border"
                     }`}
                   />
@@ -207,7 +207,7 @@ export default function Contact() {
               </div>
 
               <div className="flex flex-col gap-1.5">
-                <label className="text-xs font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400">
+                <label className="text-xs font-bold uppercase tracking-wider text-slate-600">
                   Subject *
                 </label>
                 <input
@@ -216,7 +216,7 @@ export default function Contact() {
                   value={formData.subject}
                   onChange={handleChange}
                   placeholder="e.g. Scholarship Verification, Water borehole project request"
-                  className={`bg-slate-50 dark:bg-slate-950 border rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary ${
+                  className={`bg-slate-50 border rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary ${
                     errors.subject ? "border-red-500" : "border-border"
                   }`}
                 />
@@ -224,7 +224,7 @@ export default function Contact() {
               </div>
 
               <div className="flex flex-col gap-1.5">
-                <label className="text-xs font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400">
+                <label className="text-xs font-bold uppercase tracking-wider text-slate-600">
                   Message Content *
                 </label>
                 <textarea
@@ -233,7 +233,7 @@ export default function Contact() {
                   value={formData.message}
                   onChange={handleChange}
                   placeholder="Write your message details here..."
-                  className={`bg-slate-50 dark:bg-slate-950 border rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary resize-none ${
+                  className={`bg-slate-50 border rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary resize-none ${
                     errors.message ? "border-red-500" : "border-border"
                   }`}
                 ></textarea>
@@ -252,14 +252,14 @@ export default function Contact() {
       </section>
 
       {/* 3. Google Maps placeholder section */}
-      <section className="h-96 w-full bg-slate-100 dark:bg-slate-950 border-t border-border relative flex items-center justify-center overflow-hidden">
+      <section className="h-96 w-full bg-slate-100 border-t border-border relative flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#1e3a8a_1.5px,transparent_1.5px)] [background-size:24px_24px]"></div>
         <div className="relative text-center p-6 z-10 max-w-md mx-auto">
           <svg className="w-10 h-10 text-primary mx-auto mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
             <path strokeLinecap="round" strokeLinejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
           </svg>
-          <h4 className="font-extrabold text-secondary dark:text-white mb-2 text-sm sm:text-base">Delta State Location Map</h4>
-          <p className="text-slate-500 dark:text-slate-400 text-xs leading-relaxed font-semibold">
+          <h4 className="font-extrabold text-secondary mb-2 text-sm sm:text-base">Delta State Location Map</h4>
+          <p className="text-slate-500 text-xs leading-relaxed font-semibold">
             Obiaruku administrative offices / Asaba scholarship council, Delta State, Nigeria. 
           </p>
           <span className="text-xxs font-bold uppercase tracking-widest text-primary mt-2 block">

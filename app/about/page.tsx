@@ -22,22 +22,22 @@ export default function About() {
       {/* 2. Mission & Vision */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-12">
         {/* Mission Card */}
-        <div className="bg-white dark:bg-slate-900 border border-border p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow flex gap-5">
+        <div className="bg-white border border-border p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow flex gap-5">
           <div className="p-3.5 bg-primary/10 rounded-xl h-fit">
             <svg className="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
               <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
             </svg>
           </div>
           <div>
-            <h2 className="text-xl font-bold text-secondary dark:text-white mb-3">Our Mission</h2>
-            <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed font-medium">
+            <h2 className="text-xl font-bold text-secondary mb-3">Our Mission</h2>
+            <p className="text-slate-600 text-sm leading-relaxed font-medium">
               To drive inclusive growth, combat poverty, and build community resilience in Delta State by offering premium educational scholarships to indigent students, funding solar-powered water infrastructure, and running structural vocational training projects for youths.
             </p>
           </div>
         </div>
 
         {/* Vision Card */}
-        <div className="bg-white dark:bg-slate-900 border border-border p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow flex gap-5">
+        <div className="bg-white border border-border p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow flex gap-5">
           <div className="p-3.5 bg-accent/10 rounded-xl h-fit">
             <svg className="h-6 w-6 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
               <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -45,8 +45,8 @@ export default function About() {
             </svg>
           </div>
           <div>
-            <h2 className="text-xl font-bold text-secondary dark:text-white mb-3">Our Vision</h2>
-            <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed font-medium">
+            <h2 className="text-xl font-bold text-secondary mb-3">Our Vision</h2>
+            <p className="text-slate-600 text-sm leading-relaxed font-medium">
               To see a progressive Delta State where local communities enjoy clean, accessible drinking water, and where every motivated student has the educational funding and skills needed to achieve absolute self-reliance.
             </p>
           </div>
@@ -54,11 +54,11 @@ export default function About() {
       </section>
 
       {/* 3. Core Values */}
-      <section className="py-16 bg-slate-50 dark:bg-slate-950 border-y border-border px-4 sm:px-6 lg:px-8">
+      <section className="py-16 bg-slate-50 border-y border-border px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto w-full">
           <div className="text-center mb-12">
             <h2 className="text-xs font-bold text-primary uppercase tracking-widest mb-2">How We Work</h2>
-            <p className="text-2xl sm:text-3xl font-extrabold text-secondary dark:text-white">Our Core Values</p>
+            <p className="text-2xl sm:text-3xl font-extrabold text-secondary">Our Core Values</p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
@@ -66,8 +66,8 @@ export default function About() {
               <div className="w-12 h-12 rounded-full bg-secondary text-white flex items-center justify-center font-bold text-lg mb-4 shadow">
                 I
               </div>
-              <h3 className="font-bold text-base mb-2 text-secondary dark:text-white">Integrity</h3>
-              <p className="text-slate-500 dark:text-slate-400 text-xs sm:text-sm leading-relaxed font-medium">
+              <h3 className="font-bold text-base mb-2 text-secondary">Integrity</h3>
+              <p className="text-slate-500 text-xs sm:text-sm leading-relaxed font-medium">
                 We maintain absolute transparency, fairness, and accountability in our scholarship selection processes and project executions.
               </p>
             </div>
@@ -76,8 +76,8 @@ export default function About() {
               <div className="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold text-lg mb-4 shadow">
                 C
               </div>
-              <h3 className="font-bold text-base mb-2 text-secondary dark:text-white">Compassion</h3>
-              <p className="text-slate-500 dark:text-slate-400 text-xs sm:text-sm leading-relaxed font-medium">
+              <h3 className="font-bold text-base mb-2 text-secondary">Compassion</h3>
+              <p className="text-slate-500 text-xs sm:text-sm leading-relaxed font-medium">
                 Our foundation is driven by a deep love for our people and a passion to alleviate hardships for the most vulnerable members of society.
               </p>
             </div>
@@ -86,8 +86,8 @@ export default function About() {
               <div className="w-12 h-12 rounded-full bg-accent text-white flex items-center justify-center font-bold text-lg mb-4 shadow">
                 S
               </div>
-              <h3 className="font-bold text-base mb-2 text-secondary dark:text-white">Sustainability</h3>
-              <p className="text-slate-500 dark:text-slate-400 text-xs sm:text-sm leading-relaxed font-medium">
+              <h3 className="font-bold text-base mb-2 text-secondary">Sustainability</h3>
+              <p className="text-slate-500 text-xs sm:text-sm leading-relaxed font-medium">
                 We don&apos;t just provide short-term relief; we invest in long-term capacities like education and basic clean water systems.
               </p>
             </div>
@@ -100,7 +100,7 @@ export default function About() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           {/* Logo emblem portrait visual */}
           <div className="lg:col-span-4 flex justify-center lg:sticky lg:top-24">
-            <div className="border border-border p-4 bg-white dark:bg-slate-900 rounded-3xl shadow-lg w-full max-w-[280px]">
+            <div className="border border-border p-4 bg-white rounded-3xl shadow-lg w-full max-w-[280px]">
               <div className="relative aspect-square overflow-hidden rounded-2xl bg-slate-50 border border-primary/20">
                 <Image
                   src="/img10.jpg"
@@ -113,7 +113,7 @@ export default function About() {
                 <span className="text-xxs font-extrabold uppercase tracking-widest text-primary">
                   FOUNDATION FOUNDER
                 </span>
-                <h4 className="text-sm font-black text-secondary dark:text-white mt-1">
+                <h4 className="text-sm font-black text-secondary mt-1">
                   Sir Fidelis O. Tilije
                 </h4>
                 <p className="text-[10px] text-muted font-bold mt-0.5 uppercase tracking-wide">
@@ -124,11 +124,11 @@ export default function About() {
           </div>
 
           {/* Detailed Narrative */}
-          <div className="lg:col-span-8 flex flex-col gap-6 text-sm sm:text-base leading-relaxed text-slate-600 dark:text-slate-300 font-medium">
+          <div className="lg:col-span-8 flex flex-col gap-6 text-sm sm:text-base leading-relaxed text-slate-600 font-medium">
             <span className="text-primary font-bold text-xs uppercase tracking-widest">
               Biographical Profile
             </span>
-            <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-secondary dark:text-white">
+            <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-secondary">
               Sir Fidelis Okenmor Tilije
             </h2>
             <div className="w-12 h-1 bg-primary rounded-full mb-2"></div>
@@ -141,7 +141,7 @@ export default function About() {
               He holds an educational foundation in accounting and business administration. Sir Tilije entered Nigeria&apos;s banking industry where he rose through the ranks to executive positions, eventually serving as the Managing Director/CEO of Fortune Bank PLC. His experience in financial management, corporate governance, and economic structuring became a hallmark of his professional reputation.
             </p>
 
-            <h3 className="font-bold text-lg text-secondary dark:text-white mt-4">
+            <h3 className="font-bold text-lg text-secondary mt-4">
               Transition to Public Service
             </h3>
             <p>
@@ -156,7 +156,7 @@ export default function About() {
               </li>
             </ul>
 
-            <h3 className="font-bold text-lg text-secondary dark:text-white mt-4">
+            <h3 className="font-bold text-lg text-secondary mt-4">
               Philanthropic Vision
             </h3>
             <p>

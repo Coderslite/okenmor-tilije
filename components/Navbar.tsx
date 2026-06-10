@@ -91,7 +91,7 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "glass-effect shadow-md py-3 dark:shadow-slate-900/30"
+          ? "glass-effect shadow-md py-3"
           : "bg-transparent py-5"
       }`}
     >
@@ -101,7 +101,7 @@ export default function Navbar() {
           <Link href="/" className="flex items-center gap-3 group">
             <FoundationLogo className="h-12 w-12 transition-transform duration-300 group-hover:scale-105" />
             <div className="flex flex-col">
-              <span className="font-bold text-lg leading-tight tracking-tight text-secondary dark:text-white group-hover:text-primary transition-colors duration-200">
+              <span className="font-bold text-lg leading-tight tracking-tight text-secondary group-hover:text-primary transition-colors duration-200">
                 OKENMOR TILIJE
               </span>
               <span className="text-xs font-semibold tracking-wider text-accent uppercase">
@@ -121,7 +121,7 @@ export default function Navbar() {
                   className={`text-sm font-semibold transition-colors duration-200 hover:text-primary ${
                     isActive
                       ? "text-primary border-b-2 border-primary pb-1"
-                      : "text-slate-700 dark:text-slate-300"
+                      : "text-slate-700"
                   }`}
                 >
                   {link.name}
@@ -145,7 +145,7 @@ export default function Navbar() {
             <button
               onClick={toggleMenu}
               type="button"
-              className="inline-flex items-center justify-center p-2 rounded-md text-slate-700 dark:text-slate-300 hover:text-primary hover:bg-slate-100 dark:hover:bg-slate-800 focus:outline-none"
+              className="inline-flex items-center justify-center p-2 rounded-md text-slate-700 hover:text-primary hover:bg-slate-100 focus:outline-none"
               aria-controls="mobile-menu"
               aria-expanded="false"
             >
@@ -181,7 +181,7 @@ export default function Navbar() {
       {/* Mobile Menu Panel */}
       {isOpen && (
         <div className="md:hidden animate-fade-in" id="mobile-menu">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white dark:bg-slate-900 border-b border-border shadow-lg">
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-b border-border shadow-lg">
             {navLinks.map((link) => {
               const isActive = pathname === link.href;
               return (
@@ -191,8 +191,8 @@ export default function Navbar() {
                   onClick={() => setIsOpen(false)}
                   className={`block px-3 py-3 rounded-md text-base font-semibold transition-colors duration-200 ${
                     isActive
-                      ? "bg-slate-100 dark:bg-slate-800 text-primary"
-                      : "text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-primary"
+                      ? "bg-slate-100 text-primary"
+                      : "text-slate-700 hover:bg-slate-50 hover:text-primary"
                   }`}
                 >
                   {link.name}

@@ -254,10 +254,10 @@ export default function Home() {
 
       {/* 2. Quick Statistics */}
       <section className="relative z-20 -mt-10 max-w-6xl mx-auto w-full px-4">
-        <div className="bg-white dark:bg-slate-900 rounded-3xl shadow-xl border border-border grid grid-cols-2 md:grid-cols-4 p-8 md:p-12 gap-8 text-center">
+        <div className="bg-white rounded-3xl shadow-xl border border-border grid grid-cols-2 md:grid-cols-4 p-8 md:p-12 gap-8 text-center">
           {stats.map((stat, i) => (
             <div key={i} className="flex flex-col gap-2">
-              <span className="text-3xl md:text-4xl font-extrabold text-secondary dark:text-primary-dark">
+              <span className="text-3xl md:text-4xl font-extrabold text-secondary">
                 {stat.value}
               </span>
               <span className="text-xs md:text-sm text-muted font-semibold uppercase tracking-wider">
@@ -282,15 +282,15 @@ export default function Home() {
           {pillars.map((pillar, i) => (
             <div
               key={i}
-              className="bg-white dark:bg-slate-900 rounded-2xl p-8 border border-border shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col h-full"
+              className="bg-white rounded-2xl p-8 border border-border shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col h-full"
             >
-              <div className="p-3 bg-slate-50 dark:bg-slate-800 rounded-xl w-fit mb-6">
+              <div className="p-3 bg-slate-50 rounded-xl w-fit mb-6">
                 {pillar.icon}
               </div>
-              <h3 className="text-xl font-bold mb-3 text-secondary dark:text-white">
+              <h3 className="text-xl font-bold mb-3 text-secondary">
                 {pillar.title}
               </h3>
-              <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6 flex-1 font-medium">
+              <p className="text-slate-600 text-sm leading-relaxed mb-6 flex-1 font-medium">
                 {pillar.description}
               </p>
               <Link
@@ -308,12 +308,12 @@ export default function Home() {
       </section>
 
       {/* 4. Founder Highlight */}
-      <section className="py-20 bg-slate-50 dark:bg-slate-950 px-4 sm:px-6 lg:px-8 border-y border-border">
+      <section className="py-20 bg-slate-50 px-4 sm:px-6 lg:px-8 border-y border-border">
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
           {/* Founder Image Emblem container */}
           <div className="lg:col-span-5 flex justify-center">
-            <div className="relative group p-4 bg-white dark:bg-slate-900 rounded-3xl shadow-xl border border-border max-w-sm w-full">
+            <div className="relative group p-4 bg-white rounded-3xl shadow-xl border border-border max-w-sm w-full">
               <div className="relative aspect-square overflow-hidden rounded-2xl bg-slate-50 border-4 border-primary/20">
                 <Image
                   src="/img10.jpg"
@@ -333,15 +333,15 @@ export default function Home() {
             <span className="text-primary font-bold text-xs uppercase tracking-widest">
               Meet the Founder
             </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-secondary dark:text-white">
+            <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-secondary">
               A Legacy of Service and Community Building
             </h2>
             <div className="w-12 h-1 bg-primary rounded-full"></div>
-            <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed font-medium">
+            <p className="text-slate-600 text-sm sm:text-base leading-relaxed font-medium">
               Sir Fidelis Okenmor Tilije is a seasoned banker, administrator, and state leader who has spent decades working to uplift communities in Delta State, Nigeria. 
               As the Delta State Commissioner for Finance, he has consistently championed economic development. Through the **Okenmor Tilije Foundation**, he translates his personal commitment into social impact, providing structured support for students, providing water, and building local capacities.
             </p>
-            <blockquote className="border-l-4 border-accent pl-4 italic text-sm text-slate-500 dark:text-slate-400 font-semibold my-2">
+            <blockquote className="border-l-4 border-accent pl-4 italic text-sm text-slate-500 font-semibold my-2">
               &ldquo;True leadership is measured not by personal accumulation, but by the number of young minds we empower to carry our communities forward.&rdquo;
             </blockquote>
             <div>
@@ -382,10 +382,10 @@ export default function Home() {
           {events.map((event, i) => (
             <article
               key={i}
-              className="bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-border shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col"
+              className="bg-white rounded-2xl overflow-hidden border border-border shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col"
             >
               {/* Event Image Placeholder with SVG abstract pattern */}
-              <div className="relative h-48 bg-slate-100 dark:bg-slate-800 flex items-center justify-center">
+              <div className="relative h-48 bg-slate-100 flex items-center justify-center">
                 <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#e11d48_1px,transparent_1px)] [background-size:16px_16px]"></div>
                 <div className="flex flex-col items-center gap-2 p-6 text-center">
                   <span className="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
@@ -397,10 +397,10 @@ export default function Home() {
               
               <div className="p-6 flex-1 flex flex-col justify-between">
                 <div>
-                  <h3 className="font-bold text-base text-secondary dark:text-white mb-2 line-clamp-2">
+                  <h3 className="font-bold text-base text-secondary mb-2 line-clamp-2">
                     {event.title}
                   </h3>
-                  <p className="text-slate-500 dark:text-slate-400 text-xs sm:text-sm leading-relaxed mb-4 line-clamp-3">
+                  <p className="text-slate-500 text-xs sm:text-sm leading-relaxed mb-4 line-clamp-3">
                     {event.description}
                   </p>
                 </div>

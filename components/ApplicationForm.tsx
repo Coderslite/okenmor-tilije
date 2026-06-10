@@ -121,15 +121,15 @@ export default function ApplicationForm() {
 
   if (submitted) {
     return (
-      <div className="bg-white dark:bg-slate-900 border border-border rounded-3xl p-8 md:p-12 text-center shadow-lg max-w-2xl mx-auto animate-fade-in">
-        <div className="w-16 h-16 bg-emerald-100 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-400 rounded-full flex items-center justify-center mx-auto mb-6">
+      <div className="bg-white border border-border rounded-3xl p-8 md:p-12 text-center shadow-lg max-w-2xl mx-auto animate-fade-in">
+        <div className="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6">
           <svg className="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
             <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
           </svg>
         </div>
-        <h3 className="text-2xl font-black text-secondary dark:text-white mb-3">Application Submitted Successfully!</h3>
-        <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed mb-6 font-medium">
-          Thank you, <strong className="text-secondary dark:text-white">{formData.fullName}</strong>. Your application for the Okenmor Tilije Foundation Tertiary Scholarship has been logged. 
+        <h3 className="text-2xl font-black text-secondary mb-3">Application Submitted Successfully!</h3>
+        <p className="text-sm text-slate-500 leading-relaxed mb-6 font-medium">
+          Thank you, <strong className="text-secondary">{formData.fullName}</strong>. Your application for the Okenmor Tilije Foundation Tertiary Scholarship has been logged. 
           A confirmation email has been sent to <span className="text-primary font-bold">{formData.email}</span>. The scholarship board will review your credentials and contact your institution for verification.
         </p>
         <button
@@ -147,10 +147,10 @@ export default function ApplicationForm() {
   }
 
   return (
-    <div className="bg-white dark:bg-slate-900 border border-border rounded-3xl p-6 md:p-10 shadow-lg max-w-3xl mx-auto">
+    <div className="bg-white border border-border rounded-3xl p-6 md:p-10 shadow-lg max-w-3xl mx-auto">
       {/* Progress Stepper */}
       <div className="flex items-center justify-between mb-10 max-w-md mx-auto relative">
-        <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-slate-200 dark:bg-slate-800 -translate-y-1/2 z-0"></div>
+        <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-slate-200 -translate-y-1/2 z-0"></div>
         {[1, 2, 3].map((s) => (
           <div key={s} className="relative z-10 flex flex-col items-center">
             <div
@@ -159,7 +159,7 @@ export default function ApplicationForm() {
                   ? "bg-primary border-primary text-white scale-110"
                   : step > s
                   ? "bg-secondary border-secondary text-white"
-                  : "bg-white dark:bg-slate-900 border-slate-300 dark:border-slate-800 text-slate-400"
+                  : "bg-white border-slate-300 text-slate-400"
               }`}
             >
               {step > s ? (
@@ -181,13 +181,13 @@ export default function ApplicationForm() {
         {/* STEP 1: PERSONAL BIO DATA */}
         {step === 1 && (
           <div className="space-y-5 animate-fade-in">
-            <h4 className="font-extrabold text-lg text-secondary dark:text-white border-b border-border pb-2 mb-4">
+            <h4 className="font-extrabold text-lg text-secondary border-b border-border pb-2 mb-4">
               Step 1: Personal & Location Details
             </h4>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="flex flex-col gap-1.5">
-                <label className="text-xs font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400">
+                <label className="text-xs font-bold uppercase tracking-wider text-slate-600">
                   Full Name (Surname First) *
                 </label>
                 <input
@@ -196,7 +196,7 @@ export default function ApplicationForm() {
                   value={formData.fullName}
                   onChange={handleChange}
                   placeholder="e.g. Ogene Chukwuemeka Fidelis"
-                  className={`bg-slate-50 dark:bg-slate-950 border rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary ${
+                  className={`bg-slate-50 border rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary ${
                     errors.fullName ? "border-red-500" : "border-border"
                   }`}
                 />
@@ -204,7 +204,7 @@ export default function ApplicationForm() {
               </div>
 
               <div className="flex flex-col gap-1.5">
-                <label className="text-xs font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400">
+                <label className="text-xs font-bold uppercase tracking-wider text-slate-600">
                   Email Address *
                 </label>
                 <input
@@ -213,7 +213,7 @@ export default function ApplicationForm() {
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="name@example.com"
-                  className={`bg-slate-50 dark:bg-slate-950 border rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary ${
+                  className={`bg-slate-50 border rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary ${
                     errors.email ? "border-red-500" : "border-border"
                   }`}
                 />
@@ -223,7 +223,7 @@ export default function ApplicationForm() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="flex flex-col gap-1.5">
-                <label className="text-xs font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400">
+                <label className="text-xs font-bold uppercase tracking-wider text-slate-600">
                   Phone Number *
                 </label>
                 <input
@@ -232,7 +232,7 @@ export default function ApplicationForm() {
                   value={formData.phone}
                   onChange={handleChange}
                   placeholder="e.g. +234 803 123 4567"
-                  className={`bg-slate-50 dark:bg-slate-950 border rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary ${
+                  className={`bg-slate-50 border rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary ${
                     errors.phone ? "border-red-500" : "border-border"
                   }`}
                 />
@@ -240,14 +240,14 @@ export default function ApplicationForm() {
               </div>
 
               <div className="flex flex-col gap-1.5">
-                <label className="text-xs font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400">
+                <label className="text-xs font-bold uppercase tracking-wider text-slate-600">
                   Local Government Area (LGA) *
                 </label>
                 <select
                   name="lga"
                   value={formData.lga}
                   onChange={handleChange}
-                  className={`bg-slate-50 dark:bg-slate-950 border rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary ${
+                  className={`bg-slate-50 border rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary ${
                     errors.lga ? "border-red-500" : "border-border"
                   }`}
                 >
@@ -264,14 +264,14 @@ export default function ApplicationForm() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="flex flex-col gap-1.5">
-                <label className="text-xs font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400">
+                <label className="text-xs font-bold uppercase tracking-wider text-slate-600">
                   Federal Constituency *
                 </label>
                 <select
                   name="constituency"
                   value={formData.constituency}
                   onChange={handleChange}
-                  className="bg-slate-50 dark:bg-slate-950 border border-border rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary"
+                  className="bg-slate-50 border border-border rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary"
                 >
                   {constituencies.map((c) => (
                     <option key={c} value={c}>
@@ -282,7 +282,7 @@ export default function ApplicationForm() {
               </div>
 
               <div className="flex flex-col gap-1.5">
-                <label className="text-xs font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400">
+                <label className="text-xs font-bold uppercase tracking-wider text-slate-600">
                   Contact / Residential Address *
                 </label>
                 <input
@@ -291,7 +291,7 @@ export default function ApplicationForm() {
                   value={formData.address}
                   onChange={handleChange}
                   placeholder="Home address in Delta State"
-                  className={`bg-slate-50 dark:bg-slate-950 border rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary ${
+                  className={`bg-slate-50 border rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary ${
                     errors.address ? "border-red-500" : "border-border"
                   }`}
                 />
@@ -304,13 +304,13 @@ export default function ApplicationForm() {
         {/* STEP 2: ACADEMIC DETAILS */}
         {step === 2 && (
           <div className="space-y-5 animate-fade-in">
-            <h4 className="font-extrabold text-lg text-secondary dark:text-white border-b border-border pb-2 mb-4">
+            <h4 className="font-extrabold text-lg text-secondary border-b border-border pb-2 mb-4">
               Step 2: Institution & Academic Records
             </h4>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="flex flex-col gap-1.5">
-                <label className="text-xs font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400">
+                <label className="text-xs font-bold uppercase tracking-wider text-slate-600">
                   Tertiary Institution (University/Polytechnic/College) *
                 </label>
                 <input
@@ -319,7 +319,7 @@ export default function ApplicationForm() {
                   value={formData.institution}
                   onChange={handleChange}
                   placeholder="e.g. Delta State University, Abraka"
-                  className={`bg-slate-50 dark:bg-slate-950 border rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary ${
+                  className={`bg-slate-50 border rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary ${
                     errors.institution ? "border-red-500" : "border-border"
                   }`}
                 />
@@ -327,7 +327,7 @@ export default function ApplicationForm() {
               </div>
 
               <div className="flex flex-col gap-1.5">
-                <label className="text-xs font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400">
+                <label className="text-xs font-bold uppercase tracking-wider text-slate-600">
                   Course of Study *
                 </label>
                 <input
@@ -336,7 +336,7 @@ export default function ApplicationForm() {
                   value={formData.courseOfStudy}
                   onChange={handleChange}
                   placeholder="e.g. Bachelor of Medicine (MBBS)"
-                  className={`bg-slate-50 dark:bg-slate-950 border rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary ${
+                  className={`bg-slate-50 border rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary ${
                     errors.courseOfStudy ? "border-red-500" : "border-border"
                   }`}
                 />
@@ -346,7 +346,7 @@ export default function ApplicationForm() {
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               <div className="flex flex-col gap-1.5">
-                <label className="text-xs font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400">
+                <label className="text-xs font-bold uppercase tracking-wider text-slate-600">
                   Matric / Admission Number *
                 </label>
                 <input
@@ -355,7 +355,7 @@ export default function ApplicationForm() {
                   value={formData.matricNo}
                   onChange={handleChange}
                   placeholder="e.g. DELSU/2023/12345"
-                  className={`bg-slate-50 dark:bg-slate-950 border rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary ${
+                  className={`bg-slate-50 border rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary ${
                     errors.matricNo ? "border-red-500" : "border-border"
                   }`}
                 />
@@ -363,14 +363,14 @@ export default function ApplicationForm() {
               </div>
 
               <div className="flex flex-col gap-1.5">
-                <label className="text-xs font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400">
+                <label className="text-xs font-bold uppercase tracking-wider text-slate-600">
                   Current Level of Study *
                 </label>
                 <select
                   name="level"
                   value={formData.level}
                   onChange={handleChange}
-                  className="bg-slate-50 dark:bg-slate-950 border border-border rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary"
+                  className="bg-slate-50 border border-border rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary"
                 >
                   <option value="100">100 Level</option>
                   <option value="200">200 Level</option>
@@ -382,7 +382,7 @@ export default function ApplicationForm() {
               </div>
 
               <div className="flex flex-col gap-1.5">
-                <label className="text-xs font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400">
+                <label className="text-xs font-bold uppercase tracking-wider text-slate-600">
                   Current Cumulative GPA (CGPA) *
                 </label>
                 <input
@@ -391,7 +391,7 @@ export default function ApplicationForm() {
                   value={formData.cgpa}
                   onChange={handleChange}
                   placeholder="e.g. 3.75"
-                  className={`bg-slate-50 dark:bg-slate-950 border rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary ${
+                  className={`bg-slate-50 border rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary ${
                     errors.cgpa ? "border-red-500" : "border-border"
                   }`}
                 />
@@ -404,17 +404,17 @@ export default function ApplicationForm() {
         {/* STEP 3: REFEREE VERIFICATION */}
         {step === 3 && (
           <div className="space-y-5 animate-fade-in">
-            <h4 className="font-extrabold text-lg text-secondary dark:text-white border-b border-border pb-2 mb-4">
+            <h4 className="font-extrabold text-lg text-secondary border-b border-border pb-2 mb-4">
               Step 3: Verification & Guarantor Referee
             </h4>
 
-            <div className="p-4 bg-amber-50 dark:bg-amber-950/20 text-amber-800 dark:text-amber-400 rounded-2xl text-xs sm:text-sm font-semibold border border-amber-200/50 mb-4">
+            <div className="p-4 bg-amber-50 text-amber-800 rounded-2xl text-xs sm:text-sm font-semibold border border-amber-200/50 mb-4">
               <strong>Notice:</strong> Please provide a referee who is a community leader, school lecturer, or a recognized leader in your LGA. They must be reachable to verify your student status.
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="flex flex-col gap-1.5">
-                <label className="text-xs font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400">
+                <label className="text-xs font-bold uppercase tracking-wider text-slate-600">
                   Referee Full Name *
                 </label>
                 <input
@@ -423,7 +423,7 @@ export default function ApplicationForm() {
                   value={formData.refereeName}
                   onChange={handleChange}
                   placeholder="e.g. Chief Dr. Charles Ogene"
-                  className={`bg-slate-50 dark:bg-slate-950 border rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary ${
+                  className={`bg-slate-50 border rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary ${
                     errors.refereeName ? "border-red-500" : "border-border"
                   }`}
                 />
@@ -431,7 +431,7 @@ export default function ApplicationForm() {
               </div>
 
               <div className="flex flex-col gap-1.5">
-                <label className="text-xs font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400">
+                <label className="text-xs font-bold uppercase tracking-wider text-slate-600">
                   Referee Phone Number *
                 </label>
                 <input
@@ -440,7 +440,7 @@ export default function ApplicationForm() {
                   value={formData.refereePhone}
                   onChange={handleChange}
                   placeholder="e.g. +234 803 765 4321"
-                  className={`bg-slate-50 dark:bg-slate-950 border rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary ${
+                  className={`bg-slate-50 border rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary ${
                     errors.refereePhone ? "border-red-500" : "border-border"
                   }`}
                 />
@@ -449,20 +449,20 @@ export default function ApplicationForm() {
             </div>
 
             {/* Document Upload Simulation */}
-            <div className="mt-4 border-2 border-dashed border-slate-300 dark:border-slate-800 rounded-2xl p-6 text-center">
+            <div className="mt-4 border-2 border-dashed border-slate-300 rounded-2xl p-6 text-center">
               <svg className="w-8 h-8 text-slate-400 mx-auto mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />
               </svg>
-              <span className="text-xs font-extrabold uppercase tracking-wide text-secondary dark:text-white">
+              <span className="text-xs font-extrabold uppercase tracking-wide text-secondary">
                 Drag and Drop Support Files
               </span>
-              <p className="text-xxs text-slate-500 dark:text-slate-400 mt-1 leading-normal max-w-xs mx-auto font-medium">
+              <p className="text-xxs text-slate-500 mt-1 leading-normal max-w-xs mx-auto font-medium">
                 Include admission letter, LGA certificate of origin, and CGPA transcript. Max 5MB per PDF/JPG.
               </p>
               <input type="file" disabled className="hidden" />
               <button
                 type="button"
-                className="mt-3 bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 text-xxs font-extrabold px-3 py-1.5 rounded-lg border border-border"
+                className="mt-3 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xxs font-extrabold px-3 py-1.5 rounded-lg border border-border"
               >
                 Browse Files
               </button>
@@ -476,7 +476,7 @@ export default function ApplicationForm() {
             <button
               type="button"
               onClick={handleBack}
-              className="border border-slate-300 dark:border-slate-800 text-slate-700 dark:text-slate-300 font-bold text-xs sm:text-sm px-5 py-2.5 rounded-xl bg-white dark:bg-slate-900 transition-colors"
+              className="border border-slate-300 text-slate-700 font-bold text-xs sm:text-sm px-5 py-2.5 rounded-xl bg-white transition-colors"
             >
               Back
             </button>

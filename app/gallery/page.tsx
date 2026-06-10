@@ -9,7 +9,7 @@ const galleryEvents = [
     description: "Community outreach meeting with Sir Fidelis Okenmor Tilije and stakeholders coordinate medical checkups and diagnostic tests.",
     year: "2026",
     category: "Medical Outreach",
-    badgeColor: "bg-emerald-50 border-emerald-100 text-emerald-600 dark:bg-emerald-950/20 dark:border-emerald-900/30 dark:text-emerald-400",
+    badgeColor: "bg-emerald-50 border-emerald-100 text-emerald-600",
     image: "/img1.jpg"
   },
   {
@@ -17,7 +17,7 @@ const galleryEvents = [
     description: "Delta State scholarship review committee and Board members discuss applicant listings to ensure transparent screenings.",
     year: "2026",
     category: "Scholarship Review",
-    badgeColor: "bg-rose-50 border-rose-100 text-rose-600 dark:bg-rose-950/20 dark:border-rose-900/30 dark:text-rose-400",
+    badgeColor: "bg-rose-50 border-rose-100 text-rose-600",
     image: "/img2.jpg"
   },
   {
@@ -25,7 +25,7 @@ const galleryEvents = [
     description: "Sir Fidelis Okenmor Tilije chairing a planning meeting with local government executives on drilling new solar water boreholes.",
     year: "2026",
     category: "Infrastructure Planning",
-    badgeColor: "bg-blue-50 border-blue-100 text-blue-600 dark:bg-blue-950/20 dark:border-blue-900/30 dark:text-blue-400",
+    badgeColor: "bg-blue-50 border-blue-100 text-blue-600",
     image: "/img3.jpg"
   },
   {
@@ -33,7 +33,7 @@ const galleryEvents = [
     description: "Official visual branding mark of the foundation representing joint growth, community reach, and structural leadership.",
     year: "2025",
     category: "Official Branding",
-    badgeColor: "bg-amber-50 border-amber-100 text-amber-600 dark:bg-amber-950/20 dark:border-amber-900/30 dark:text-amber-400",
+    badgeColor: "bg-amber-50 border-amber-100 text-amber-600",
     image: "/img10.jpg"
   },
   {
@@ -41,7 +41,7 @@ const galleryEvents = [
     description: "Board executives cross-checking tertiary lists and financial budgets at the foundation headquarters.",
     year: "2025",
     category: "Financial Audit",
-    badgeColor: "bg-orange-50 border-orange-100 text-orange-600 dark:bg-orange-950/20 dark:border-orange-900/30 dark:text-orange-400",
+    badgeColor: "bg-orange-50 border-orange-100 text-orange-600",
     image: "/img2.jpg"
   },
   {
@@ -49,7 +49,7 @@ const galleryEvents = [
     description: "Sir Fidelis Okenmor Tilije greeting Anioma delegates to foster collaboration on youth empowerment schemes.",
     year: "2025",
     category: "Civic Outreach",
-    badgeColor: "bg-purple-50 border-purple-100 text-purple-600 dark:bg-purple-950/20 dark:border-purple-900/30 dark:text-purple-400",
+    badgeColor: "bg-purple-50 border-purple-100 text-purple-600",
     image: "/img1.jpg"
   }
 ];
@@ -83,10 +83,10 @@ export default function Gallery() {
               <div
                 key={idx}
                 onClick={() => setSelectedPhoto(idx)}
-                className="group cursor-pointer bg-white dark:bg-slate-900 border border-border rounded-3xl overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between"
+                className="group cursor-pointer bg-white border border-border rounded-3xl overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between"
               >
                 {/* Media Thumbnail Container */}
-                <div className="relative aspect-[4/3] bg-slate-100 dark:bg-slate-950 overflow-hidden border-b border-border">
+                <div className="relative aspect-[4/3] bg-slate-100 overflow-hidden border-b border-border">
                   <Image
                     src={event.image}
                     alt={event.title}
@@ -108,10 +108,10 @@ export default function Gallery() {
 
                 {/* Text Meta info */}
                 <div className="p-6">
-                  <h3 className="font-extrabold text-base text-secondary dark:text-white mb-2 leading-tight group-hover:text-primary transition-colors line-clamp-1">
+                  <h3 className="font-extrabold text-base text-secondary mb-2 leading-tight group-hover:text-primary transition-colors line-clamp-1">
                     {event.title}
                   </h3>
-                  <p className="text-slate-500 dark:text-slate-400 text-xs sm:text-sm leading-relaxed font-semibold line-clamp-2">
+                  <p className="text-slate-500 text-xs sm:text-sm leading-relaxed font-semibold line-clamp-2">
                     {event.description}
                   </p>
                 </div>
@@ -154,7 +154,7 @@ export default function Gallery() {
 
           {/* Modal Container */}
           <div
-            className="bg-white dark:bg-slate-900 rounded-3xl max-w-2xl w-full border border-border overflow-hidden shadow-2xl animate-fade-in relative z-40"
+            className="bg-white rounded-3xl max-w-2xl w-full border border-border overflow-hidden shadow-2xl animate-fade-in relative z-40"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Modal graphic block */}
@@ -176,14 +176,14 @@ export default function Gallery() {
             {/* Modal detail meta */}
             <div className="p-6 sm:p-8">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-4 gap-4">
-                <h4 className="font-extrabold text-base sm:text-xl text-secondary dark:text-white leading-tight">
+                <h4 className="font-extrabold text-base sm:text-xl text-secondary leading-tight">
                   {galleryEvents[selectedPhoto].title}
                 </h4>
                 <span className="text-xs font-extrabold text-primary px-3 py-1 bg-primary/10 rounded-lg shrink-0 w-fit">
                   Year: {galleryEvents[selectedPhoto].year}
                 </span>
               </div>
-              <p className="text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed mb-6 font-semibold">
+              <p className="text-slate-600 text-xs sm:text-sm leading-relaxed mb-6 font-semibold">
                 {galleryEvents[selectedPhoto].description}
               </p>
               <div className="flex justify-between items-center text-slate-400 text-xs font-semibold">

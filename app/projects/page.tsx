@@ -88,7 +88,7 @@ export default function Projects() {
       </section>
 
       {/* 2. Filter Tabs */}
-      <section className="py-8 bg-slate-50 dark:bg-slate-950 border-b border-border px-4">
+      <section className="py-8 bg-slate-50 border-b border-border px-4">
         <div className="max-w-6xl mx-auto flex flex-wrap gap-2 justify-center">
           {categories.map((cat) => (
             <button
@@ -97,7 +97,7 @@ export default function Projects() {
               className={`px-5 py-2.5 rounded-full text-xs sm:text-sm font-extrabold transition-all duration-200 border ${
                 selectedFilter === cat
                   ? "bg-secondary border-secondary text-white shadow"
-                  : "bg-white dark:bg-slate-900 border-border text-slate-600 dark:text-slate-400 hover:border-slate-400 dark:hover:border-slate-700"
+                  : "bg-white border-border text-slate-600 hover:border-slate-400"
               }`}
             >
               {cat}
@@ -117,10 +117,10 @@ export default function Projects() {
             {filteredProjects.map((proj, idx) => (
               <div
                 key={idx}
-                className="bg-white dark:bg-slate-900 border border-border rounded-3xl overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between"
+                className="bg-white border border-border rounded-3xl overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between"
               >
                 {/* Project Image Header */}
-                <div className="relative h-48 sm:h-56 bg-slate-100 dark:bg-slate-950 overflow-hidden border-b border-border">
+                <div className="relative h-48 sm:h-56 bg-slate-100 overflow-hidden border-b border-border">
                   <Image
                     src={proj.image}
                     alt={proj.title}
@@ -140,10 +140,10 @@ export default function Projects() {
                         {proj.date}
                       </span>
                     </div>
-                    <h3 className="font-extrabold text-lg sm:text-xl text-secondary dark:text-white mb-3 leading-snug">
+                    <h3 className="font-extrabold text-lg sm:text-xl text-secondary mb-3 leading-snug">
                       {proj.title}
                     </h3>
-                    <p className="text-slate-600 dark:text-slate-400 text-xs sm:text-sm leading-relaxed mb-6 font-semibold">
+                    <p className="text-slate-600 text-xs sm:text-sm leading-relaxed mb-6 font-semibold">
                       {proj.description}
                     </p>
                   </div>
@@ -151,9 +151,9 @@ export default function Projects() {
                   <div className="flex justify-between items-center pt-4 border-t border-border mt-auto">
                     <div className="flex flex-col">
                       <span className="text-[10px] uppercase font-bold text-slate-400">Impact Metric</span>
-                      <span className="text-xs sm:text-sm font-extrabold text-secondary dark:text-white">{proj.impact}</span>
+                      <span className="text-xs sm:text-sm font-extrabold text-secondary">{proj.impact}</span>
                     </div>
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-50 dark:bg-emerald-950/20 text-emerald-600 dark:text-emerald-400 text-xxs font-extrabold rounded-lg border border-emerald-100 dark:border-emerald-950/30">
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-50 text-emerald-600 text-xxs font-extrabold rounded-lg border border-emerald-100">
                       <span className="h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
                       {proj.status}
                     </span>

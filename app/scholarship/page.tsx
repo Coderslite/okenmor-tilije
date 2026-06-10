@@ -76,23 +76,23 @@ export default function Scholarship() {
 
         {/* 2. Coming Soon Content Block */}
         <section className="py-20 px-4 max-w-2xl mx-auto w-full">
-          <div className="bg-white dark:bg-slate-900 border border-border rounded-3xl p-8 md:p-12 text-center shadow-lg">
+          <div className="bg-white border border-border rounded-3xl p-8 md:p-12 text-center shadow-lg">
             <div className="w-16 h-16 bg-amber-50 text-amber-500 rounded-full flex items-center justify-center mx-auto mb-6 border border-amber-100">
               <svg className="w-8 h-8 animate-pulse" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
             </div>
 
-            <h2 className="text-2xl font-black text-secondary dark:text-white mb-3">
+            <h2 className="text-2xl font-black text-secondary mb-3">
               Applications Launching Soon
             </h2>
-            <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 leading-relaxed mb-8 font-semibold">
+            <p className="text-xs sm:text-sm text-slate-500 leading-relaxed mb-8 font-semibold">
               The Okenmor Tilije Foundation is finalizing schedules and vetting committees for the 2026/2027 tertiary grant cycle. Sign up below to receive immediate updates, application guidelines, and opening day notifications.
             </p>
 
             {/* Notification Email Form */}
             {notified ? (
-              <div className="bg-emerald-50 dark:bg-emerald-950/20 text-emerald-600 dark:text-emerald-400 p-4 rounded-xl text-xs sm:text-sm font-semibold border border-emerald-100 dark:border-emerald-950/30 animate-fade-in mb-6">
+              <div className="bg-emerald-50 text-emerald-600 p-4 rounded-xl text-xs sm:text-sm font-semibold border border-emerald-100 animate-fade-in mb-6">
                 Thank you! We have logged your email. You will receive alert guidelines on opening day.
               </div>
             ) : (
@@ -120,7 +120,7 @@ export default function Scholarship() {
 
             <div className="flex flex-col gap-4 border-t border-border pt-8 text-left max-w-sm mx-auto">
               <h4 className="text-xs uppercase font-extrabold tracking-wider text-slate-400">Portal Highlights</h4>
-              <ul className="space-y-3.5 text-xs sm:text-sm font-semibold text-slate-600 dark:text-slate-300">
+              <ul className="space-y-3.5 text-xs sm:text-sm font-semibold text-slate-600">
                 <li className="flex gap-2">
                   <span className="text-primary font-black">•</span>
                   <span>Estimated Launch: <strong>October 2026</strong></span>
@@ -176,28 +176,28 @@ export default function Scholarship() {
           <span className="text-primary font-bold text-xs uppercase tracking-widest">
             Scholarship Guidelines
           </span>
-          <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-secondary dark:text-white">
+          <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-secondary">
             General Eligibility Criteria
           </h2>
           <div className="w-12 h-1 bg-primary rounded-full"></div>
-          <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed font-medium">
+          <p className="text-slate-600 text-sm leading-relaxed font-medium">
             To apply for the Okenmor Tilije Foundation tertiary scholarship scheme, students must verify that they fulfill all academic and geographical criteria outlined below:
           </p>
           
           <ul className="space-y-4">
-            <li className="flex gap-3 text-sm font-semibold text-slate-600 dark:text-slate-300">
+            <li className="flex gap-3 text-sm font-semibold text-slate-600">
               <svg className="h-5 w-5 text-emerald-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
               <span><strong>Constituency Origin:</strong> Must belong to Ukwuani, Ndokwa, Ika, or Aniocha/Oshimili local government areas of Delta State. Must present an LGA Certificate of Origin.</span>
             </li>
-            <li className="flex gap-3 text-sm font-semibold text-slate-600 dark:text-slate-300">
+            <li className="flex gap-3 text-sm font-semibold text-slate-600">
               <svg className="h-5 w-5 text-emerald-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
               <span><strong>Academic Status:</strong> Must be a full-time student currently registered in an accredited Nigerian Federal or State University, Polytechnic, or College of Education.</span>
             </li>
-            <li className="flex gap-3 text-sm font-semibold text-slate-600 dark:text-slate-300">
+            <li className="flex gap-3 text-sm font-semibold text-slate-600">
               <svg className="h-5 w-5 text-emerald-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
@@ -207,15 +207,15 @@ export default function Scholarship() {
         </div>
 
         {/* CTA Card */}
-        <div className="lg:col-span-5 bg-slate-50 dark:bg-slate-900 border border-border p-8 rounded-3xl flex flex-col gap-5 justify-between">
+        <div className="lg:col-span-5 bg-slate-50 border border-border p-8 rounded-3xl flex flex-col gap-5 justify-between">
           <div className="flex flex-col gap-3">
             <span className="bg-accent/10 text-accent px-3.5 py-1.5 rounded-full text-xxs font-extrabold tracking-wider w-fit uppercase">
               Now Enrolling
             </span>
-            <h3 className="font-extrabold text-xl text-secondary dark:text-white leading-tight">
+            <h3 className="font-extrabold text-xl text-secondary leading-tight">
               Tertiary Grants Call - 2026 Cycle
             </h3>
-            <p className="text-slate-500 dark:text-slate-400 text-xs sm:text-sm leading-relaxed font-semibold">
+            <p className="text-slate-500 text-xs sm:text-sm leading-relaxed font-semibold">
               The online application portal is open. Ensure you have scanned copies of your Admission Letter, LGA Certificate, and recent Semester Results before beginning.
             </p>
           </div>
@@ -230,11 +230,11 @@ export default function Scholarship() {
 
       {/* 3. Application Form Portal */}
       {showForm && (
-        <section className="py-12 bg-slate-50 dark:bg-slate-950 border-y border-border px-4 sm:px-6 lg:px-8">
+        <section className="py-12 bg-slate-50 border-y border-border px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-8">
-              <h2 className="text-2xl font-black text-secondary dark:text-white">Scholarship Application Form</h2>
-              <p className="text-xs text-slate-500 dark:text-slate-400 mt-1 font-bold">Please fill in correct details. Verification is thorough.</p>
+              <h2 className="text-2xl font-black text-secondary">Scholarship Application Form</h2>
+              <p className="text-xs text-slate-500 mt-1 font-bold">Please fill in correct details. Verification is thorough.</p>
             </div>
             <ApplicationForm />
           </div>
@@ -242,10 +242,10 @@ export default function Scholarship() {
       )}
 
       {/* 4. Shortlisted Successful Candidates (Previous list, like Monday Onyeme site) */}
-      <section className="py-20 bg-white dark:bg-slate-900 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto w-full border-t border-border">
+      <section className="py-20 bg-white px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto w-full border-t border-border">
         <div className="text-center mb-12">
           <span className="text-primary font-bold text-xs uppercase tracking-widest">Transparency Reports</span>
-          <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-secondary dark:text-white mt-1">
+          <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-secondary mt-1">
             Successful Awardees - 2024/2025
           </h2>
           <p className="text-xs text-muted max-w-md mx-auto mt-2 leading-relaxed font-bold">
@@ -258,9 +258,9 @@ export default function Scholarship() {
             <div key={index} className="border border-border rounded-2xl overflow-hidden shadow-sm">
               <button
                 onClick={() => toggleTab(index)}
-                className="w-full bg-slate-50 dark:bg-slate-950 px-6 py-5 flex items-center justify-between text-left hover:bg-slate-100/50 dark:hover:bg-slate-900 transition-colors"
+                className="w-full bg-slate-50 px-6 py-5 flex items-center justify-between text-left hover:bg-slate-100/50 transition-colors"
               >
-                <span className="font-extrabold text-sm sm:text-base text-secondary dark:text-white">
+                <span className="font-extrabold text-sm sm:text-base text-secondary">
                   {constit.constituency}
                 </span>
                 <span className="bg-primary/10 text-primary px-3 py-1 rounded-full text-xxs font-extrabold uppercase shrink-0">
@@ -269,7 +269,7 @@ export default function Scholarship() {
               </button>
 
               {activeTab === index && (
-                <div className="border-t border-border p-6 bg-white dark:bg-slate-900 overflow-x-auto">
+                <div className="border-t border-border p-6 bg-white overflow-x-auto">
                   <table className="w-full text-left text-xs sm:text-sm border-collapse min-w-[500px]">
                     <thead>
                       <tr className="border-b border-border text-slate-400 font-extrabold uppercase tracking-widest text-[10px]">
@@ -279,10 +279,10 @@ export default function Scholarship() {
                         <th className="pb-3">Institution</th>
                       </tr>
                     </thead>
-                    <tbody className="divide-y divide-border font-semibold text-slate-700 dark:text-slate-300">
+                    <tbody className="divide-y divide-border font-semibold text-slate-700">
                       {constit.candidates.map((cand, i) => (
-                        <tr key={i} className="hover:bg-slate-50/50 dark:hover:bg-slate-800/30 transition-colors">
-                          <td className="py-3.5 pr-4 font-extrabold text-secondary dark:text-white">{cand.name}</td>
+                        <tr key={i} className="hover:bg-slate-50/50 transition-colors">
+                          <td className="py-3.5 pr-4 font-extrabold text-secondary">{cand.name}</td>
                           <td className="py-3.5 pr-4">{cand.lga}</td>
                           <td className="py-3.5 pr-4">{cand.course}</td>
                           <td className="py-3.5">{cand.school}</td>
