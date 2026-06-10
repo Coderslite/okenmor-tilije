@@ -417,7 +417,153 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 6. CTA / Appeal Banner */}
+      {/* 6. Projects Preview */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+        {/* Section header */}
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-4">
+          <div>
+            <h2 className="text-xs font-bold text-primary uppercase tracking-widest mb-3">What We've Built</h2>
+            <p className="text-3xl sm:text-4xl font-extrabold tracking-tight text-secondary">
+              Featured Projects
+            </p>
+          </div>
+          <Link
+            href="/projects"
+            className="inline-flex items-center gap-2 bg-secondary hover:bg-slate-800 text-white font-bold text-sm px-6 py-2.5 rounded-full transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5 group"
+          >
+            View All Projects
+            <span className="transform group-hover:translate-x-1 transition-transform">→</span>
+          </Link>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {[
+            {
+              title: "Obiaruku Solar Water Borehole",
+              category: "Water & Solar",
+              description: "Solar-powered water supply system serving 1,500+ residents in the Obiaruku community with safe, clean drinking water.",
+              impact: "1,500+ Beneficiaries",
+              image: "/projects/road_construction.jpg",
+              badge: "bg-blue-50 border-blue-100 text-blue-600",
+            },
+            {
+              title: "Annual Free Medical Mission",
+              category: "Healthcare",
+              description: "Free testing, blood pressure medications, eye testing and corrective spectacles, and pediatrician check-ups for children.",
+              impact: "850 Patients Treated",
+              image: "/projects/road_construction2.jpg",
+              badge: "bg-emerald-50 border-emerald-100 text-emerald-600",
+            },
+            {
+              title: "Anioma Schools Book & Desk Scheme",
+              category: "Education",
+              description: "4,000+ exercise books, mathematical sets, and double-desks distributed to public schools in Ukwuani and Ndokwa West LGAs.",
+              impact: "12 Schools Supported",
+              image: "/projects/scholarship.jpg",
+              badge: "bg-rose-50 border-rose-100 text-rose-600",
+            },
+          ].map((proj, i) => (
+            <Link
+              key={i}
+              href="/projects"
+              className="group bg-white border border-border rounded-3xl overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col"
+            >
+              {/* Image */}
+              <div className="relative h-48 overflow-hidden bg-slate-100">
+                <Image
+                  src={proj.image}
+                  alt={proj.title}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute top-3 left-3 z-10">
+                  <span className={`px-3 py-1 border rounded-lg text-[10px] font-extrabold uppercase tracking-widest ${proj.badge}`}>
+                    {proj.category}
+                  </span>
+                </div>
+              </div>
+
+              {/* Content */}
+              <div className="p-6 flex flex-col flex-1">
+                <h3 className="font-extrabold text-base text-secondary mb-2 leading-snug group-hover:text-primary transition-colors">
+                  {proj.title}
+                </h3>
+                <p className="text-slate-500 text-xs sm:text-sm leading-relaxed mb-4 flex-1 font-medium">
+                  {proj.description}
+                </p>
+                <span className="inline-flex items-center gap-1.5 text-xs font-extrabold text-emerald-600 bg-emerald-50 border border-emerald-100 px-3 py-1 rounded-lg w-fit">
+                  <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/></svg>
+                  {proj.impact}
+                </span>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* 7. Gallery Preview */}
+      <section className="py-20 bg-slate-50 border-y border-border px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          {/* Section header */}
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-4">
+            <div>
+              <h2 className="text-xs font-bold text-primary uppercase tracking-widest mb-3">Visual Highlights</h2>
+              <p className="text-3xl sm:text-4xl font-extrabold tracking-tight text-secondary">
+                Photo Gallery
+              </p>
+            </div>
+            <Link
+              href="/gallery"
+              className="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white font-bold text-sm px-6 py-2.5 rounded-full transition-all duration-200 hover:shadow-lg hover:shadow-primary/25 hover:-translate-y-0.5 group"
+            >
+              View Full Gallery
+              <span className="transform group-hover:translate-x-1 transition-transform">→</span>
+            </Link>
+          </div>
+
+          {/* 4-photo responsive grid */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
+            {[
+              { src: "/img1.jpg",  title: "Community Health Outreach",         span: "md:col-span-2 md:row-span-2" },
+              { src: "/img2.jpg",  title: "Scholarship Review Board",          span: "" },
+              { src: "/img3.jpg",  title: "Solar Infrastructure Planning",     span: "" },
+              { src: "/img10.jpg", title: "Foundation Official Branding",      span: "col-span-2 md:col-span-2" },
+            ].map((photo, i) => (
+              <Link
+                key={i}
+                href="/gallery"
+                className={`group relative overflow-hidden rounded-2xl bg-slate-200 ${photo.span} ${
+                  i === 0 ? "aspect-square md:aspect-auto min-h-[200px] md:min-h-[320px]"
+                  : i === 3 ? "aspect-video md:aspect-[16/7]"
+                  : "aspect-square"
+                }`}
+              >
+                <Image
+                  src={photo.src}
+                  alt={photo.title}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                {/* Hover overlay */}
+                <div className="absolute inset-0 bg-secondary/0 group-hover:bg-secondary/70 transition-all duration-300 flex items-end p-4">
+                  <span className="text-white text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300 translate-y-2 group-hover:translate-y-0 leading-tight">
+                    {photo.title}
+                  </span>
+                </div>
+                {/* Expand icon on hover */}
+                <div className="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/0 group-hover:bg-white/20 flex items-center justify-center transition-all duration-300 opacity-0 group-hover:opacity-100">
+                  <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M4 8V4m0 0h4M4 4l5 5m11-5h-4m4 0v4m0-4l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
+                  </svg>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 8. CTA / Appeal Banner */}
+
       <section className="bg-gradient-to-br from-secondary to-slate-950 text-white py-20 px-4 sm:px-6 lg:px-8 text-center relative overflow-hidden">
         {/* Decorative elements */}
         <div className="absolute top-1/2 left-10 -translate-y-1/2 w-48 h-48 rounded-full bg-accent/10 filter blur-3xl"></div>
